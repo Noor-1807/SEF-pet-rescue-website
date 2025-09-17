@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Pet Listings</title>
+    <link rel="stylesheet" href="assets/css/Penny.css">
+
+
+</head>
+<body>
+      <header>
+    <div class="container">
+
+      <!-- Top bar: logo+title left, user email right -->
+      <div class="header-top">
+        <div class="logo-title">
+          <img src="assets/images/PPRLogo.jpeg" alt="Penny's Pet Rescue Logo" class="logo" />
+          <h1 class="site-title">Penny’s Pet Rescue</h1>
+        </div>
+
+        <!-- Your requirement: email in top-right -->
+        <div class="auth-user">
+          Signed in as: <strong>[email]</strong>
+        </div>
+      </div>
+
+      <!-- Bottom bar: nav left/center, logout right -->
+      <div class="header-bottom">
+        <nav aria-label="Primary">
+          <ul class="nav">
+            <li><a href="HomePage.html" aria-current="page">Home</a></li>
+            <li><a href="pet-search.css">Search Pets</a></li>
+            
+            <li><a href="Register.html">Register</a></li>
+          </ul>
+        </nav>
+
+        <!-- Your requirement: logout bottom-right -->
+        <div class="auth-links">
+            <a href="login.html">Login</a> |  
+          <a href="#" title="Log out">Logout</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+    <div class = "head">
+    <h1>Add Details of the Pet</h1></div>
+   
+    <section class="box">
+    <form action="#" method="post" enctype="multipart/form-data">
+         <div class = "pet">
+        <label for="petname">Pet Name:</label>
+        <input type="petname" id="petname" name="petname" required>
+
+        <label for="species">Species</label>
+        <input type="species" id="species" name="species" required>
+
+        <label for="age">Age:</label>
+        <input type="age" id="age" name="age" required>
+
+        <label for="gender">Gender:</label>
+        <input type="gender" id="gender" name="gender" required>
+
+        <label for="breed">Breed:</label>
+        <input type="breed" id="breed" name="breed">
+
+        <label for="description">Description:</label>
+        <input type="description" id="description" name="description" required>
+
+        <label for="location">Location(Suburb/State):</label>
+        <input type="location" id="location" name="location" required>
+
+        <label for="AdoptionFee">Adoption Fee:</label>
+        <input type="AdoptionFee" id="AdoptionFee" name="AdoptionFee" required>
+
+        <label for="UploadPhoto">Upload Photo:</label>
+        <input type="file" id="UploadPhoto" name="UploadPhoto" required>
+
+</div>
+        <button type="Submit">Submit</button>
+
+    </form>
+    </section>
+</body>
+</html>
