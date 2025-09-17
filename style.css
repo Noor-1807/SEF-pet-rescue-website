@@ -41,11 +41,18 @@
     width: min(1120px, 92%);
     margin-inline: auto;
   }
-  
+  .head{
+    color:#3e200a;
+    text-align: center;
+    font-family: 'poppins';
+    padding: 28px;
+    margin-bottom:0%;
+}
   h1,h2,h3{
     color: var(--heading);
     margin: 0.2em 0;
   }
+
   
   /* ===================================================
      Header
@@ -77,7 +84,7 @@
   
   .site-title{
     color: var(--header-text);
-    font-size:1.8rem;
+    font-size:  5rem;
     letter-spacing:.2px;
   }
   
@@ -175,7 +182,14 @@
     border-radius: 12px;
     padding: 1rem;
     text-align: center;
+  
   }
+
+  .feature:hover{
+    color:#e2552c;
+  }
+  
+
   .feature h3{
     margin-top: .25rem;
     font-size: 1.15rem;
@@ -184,7 +198,7 @@
     color: var(--heading);
     text-decoration: none;
   }
-  .feature h3 a:hover{ text-decoration: underline; }
+  .feature h3 a:hover{ color:#e2552c; }
   .feature p{
     margin: .5rem auto 0;
     color:#444;
@@ -236,7 +250,7 @@
 
   
   /* ===================================================
-   Page intro
+   Page intro (Register)
 =================================================== */
 .page-intro { padding: 2rem 0 1rem; }
 .page-title { font-size: clamp(1.6rem, 3vw, 2.2rem); }
@@ -340,47 +354,272 @@
 }
 
 
-/* ---- Validation helpers ---- */
-.form-field .error-text {
-  color: #b00020;
-  font-size: .85rem;
-  margin-top: .35rem;
+button{
+    color:white;
+    background-color:#8b5e3c;
+    font-size: 16px; 
+   margin-right: 30px;
+
 }
 
-.form-field input.invalid,
-.form-field select.invalid {
-  border-color: #b00020;
-  box-shadow: 0 0 0 3px rgba(176,0,32,.12);
+
+form {
+    background-color:#FDEBC8;
+  padding:30px;
+  margin: auto;
+  width: 80%;
+  border-radius: 20px;
+  border: #8b5e3c;
 }
 
-.form-field input.valid,
-.form-field select.valid {
-  border-color: #2e7d32;
+fieldset{
+    background-color: white;
+    color: black;
+    border: none;
 }
 
-/* show/hide buttons next to password fields */
-.show-toggle {
-  margin-left: .5rem;
-  padding: .35rem .6rem;
-  background: transparent;
-  border: 1px solid var(--brown);
-  border-radius: 6px;
-  color: var(--brown);
+textarea{
+    background-color:#f2f2f2;
+     padding:7px;
+    border: 1px solid black; 
+    gap:50px;   
+    width: 40%;
+}
+
+input[type= "date"],input[type="text"] {
+     background-color:#f2f2f2;
+     padding:7px;
+    border: 1px solid black; 
+    gap:50px;   
+    width: 20%;
+}
+
+
+label {
+    background-color: #5a4a3e;
+    display: flex;
+    margin-top: 10PX;
+   flex: 1;
+   border: 1px solid #8b5e3c; 
+   width: 21.5%;
+    font-family: 'poppins';
+   height: 25px;
+}
+
+
+/* Form Container (used on all forms) */
+.form-container {
+    background-color: #FAF3E0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Increased width for more space */
+    display: flex;
+    flex-direction: column; /* Align form elements vertically */
+    align-items: center; /* Center the content */
+}
+
+/* Heading */
+
+
+/* Labels for form fields */
+
+
+/* Text inputs and text area */
+.pet, input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea {
+    width: 80%; /* Full width for input fields */
+    padding: 10px;
+    margin-bottom: 20px; /* Increase bottom margin for space between fields */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #1f1f1f;
+    background-color: #f9f9f9;
+    display: block; /* Ensure inputs are stacked vertically */
+}
+
+
+/* File input */
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+/* Additional Styles for Specific Pages */
+#login-form {
+    max-width: 400px;
+}
+
+#add-pet-form {
+    max-width: 600px;
+}
+.box {
+    background: #FDEBC8;
+    border: 3px solid #8B5E3C;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+.add{
+  body {
+  background: #FAF3E0;  
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 40px;
+}
+}
+
+
+
+
+
+.card {
+  background: #FDEBC8;
+  border: 2px solid #8B5E3C;   
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
 }
-.show-toggle:hover { background: #f6ede0; }
 
-/* password strength meter */
-.password-meter {
-  height: 6px;
-  background: #eee;
-  border-radius: 4px;
-  overflow: hidden;
-  margin-top: .45rem;
+.btn-primary {
+  background: #e2552c;
+  color: #fff;
 }
-.password-meter-fill {
-  height: 100%;
-  width: 0;
-  background: #e2552c; /* will be recoloured by JS */
-  transition: width .25s ease;
+
+.btn-reset {
+  background: #e6d8c3;
+  color: #333;
+  margin-right: 10px;
+}
+.sec{
+  body {
+  background: #FAF3E0;  
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 40px;
+}
+
+.top-nav {
+  background: #FAF3E0;         
+  padding: 10px 20px;
+  text-align: left;           
+}
+
+.top-nav a {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;             
+  color: #8B5E3C;             
+  text-decoration: none;      
+  margin-right: 15px;          
+  font-weight: 500;
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #3e200a;
+}
+
+.paper {
+  background: #FDEBC8;           
+  border: 3px solid #8B5E3C;    
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #5a4a3e;
+}
+
+input, select, textarea {
+  width: 90%;              
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 16px;
+  display: block;          
+  margin-left: auto;       
+  margin-right: auto;      
+  box-sizing: border-box;  
+}
+
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-brown {
+  background: #8B5E3C;
+  color: #fff;
+}
+
+.btn-ghost {
+  background: #e6d8c3;
+  color: #333;
+  margin-right: 10px;
+}
+
+}
+
+/* Profile icon in header */
+.profile-link {
+  margin-left: auto;       /* pushes it to the far right */
+}
+
+.profile-icon {
+  width: 40px;              /* adjust size */
+  height: 40px;
+  border-radius: 50%;       /* circle if using a square png/jpg */
+  object-fit: cover;
+  background: #fff;         /* optional background if using SVG */
+  padding: 4px;             /* breathing room */
+  transition: transform 0.2s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.05);
 }
