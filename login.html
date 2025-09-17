@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<<<<<<< Updated upstream
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="assets/css/Penny.css">
+
+=======
+  <meta charset="UTF-8" />
+  <title>Login — Penny's Pet Rescue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Only login.css, as requested -->
+  <link rel="stylesheet" href="assets/css/login.css" />
+>>>>>>> Stashed changes
+</head>
+<body>
+<script src="assets/js/loginValidation.js" defer></script>
+
+  <!-- ===== Header (mirrors Register.html) ===== -->
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <div class="logo-title">
+          <img src="assets/images/PPRLogo.jpeg" alt="Penny's Pet Rescue Logo" class="logo" />
+          <h1 class="site-title">Penny’s Pet Rescue</h1>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <nav aria-label="Primary">
+          <ul class="nav">
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="pet-search.html">Search Pets</a></li>
+            <li><a href="Register.html">Register</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main>
+    <div class="container">
+      <section class="page-intro">
+        <h2 class="page-title">Welcome back</h2>
+        <p class="page-subtitle">Log in to manage your profile and adoption applications.</p>
+      </section>
+
+      <section class="form-wrap">
+        <div class="form-header">
+          <img src="assets/images/PPRLogo.jpeg" alt="Penny's Pet Rescue Logo" class="form-logo">
+          <h3>Login</h3>
+        </div>
+
+        <form id="login-form" class="form-card" action="#" method="post" novalidate>
+          <div class="form-field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Login</button>
+            <a class="link-secondary" href="Register.html">Don’t have an account? Register</a>
+          </div>
+
+          <div class="alert error" hidden aria-live="polite"></div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>© Penny’s Pet Rescue — NSW</p>
+      <nav aria-label="Footer">
+        <ul class="footer-nav">
+          <li><a href="HomePage.html">Home</a></li>
+          <li><a href="pet-search.html">Search Pets</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="about.html">Our Story</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- (Optional) Add login validation later -->
+  <!-- <script src="assets/js/login-validation.js" defer></script> -->
+</body>
+</html>
