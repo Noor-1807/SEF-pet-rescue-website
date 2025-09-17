@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register — Penny's Pet Rescue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<<<<<<< Updated upstream
+  <link rel="stylesheet" href="assets/css/Penny.css" />
+=======
+  <link rel="stylesheet" href="assets/css/register.css" />
+>>>>>>> Stashed changes
+</head>
+<body>
+<script src="assets/js/uRegValidation.js" defer></script>
+
+  <!-- ===== Header (same as Home) ===== -->
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <div class="logo-title">
+          <img src="assets/images/PPRLogo.jpeg" alt="Penny's Pet Rescue Logo" class="logo" />
+          <h1 class="site-title">Penny’s Pet Rescue</h1>
+        </div>
+       
+      </div>
+
+      <div class="header-bottom">
+        <nav aria-label="Primary">
+          <ul class="nav">
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="pet-search.html">Search Pets</a></li>
+            
+            <li><a href="Register.html" aria-current="page">Register</a></li>
+          </ul>
+        </nav>
+        
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main>
+    <div class="container">
+
+      <!-- Slogan -->
+      <section class="page-intro">
+        <h2 class="page-title">Create your account</h2>
+        <p class="page-subtitle">Only registered users can adopt — <strong>Join us to give a pet a loving home.</strong></p>
+      </section>
+
+      <!-- Registration Form Card -->
+      <section class="form-wrap">
+        <div class="form-header">
+          <img src="assets/images/PPRLogo.jpeg" alt="Penny's Pet Rescue Logo" class="form-logo">
+          <h3>Register</h3>
+        </div>
+
+        <form class="form-card" action="#" method="post" novalidate>
+          <!-- Name -->
+          <div class="grid-2">
+            <div class="form-field">
+              <label for="firstName">First Name</label>
+              <input id="firstName" name="firstName" type="text"  required>
+            </div>
+
+            <div class="form-field">
+              <label for="lastName">Last Name</label>
+              <input id="lastName" name="lastName" type="text"  required>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="grid-2">
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+              <small class="hint">This will be your username.</small>
+            </div>
+
+            <div class="form-field">
+              <label for="mobile">Mobile Number</label>
+              <input id="mobile" name="mobile" type="tel" placeholder="+61 000000000" required>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <fieldset class="fieldset">
+            <legend>Home Address</legend>
+            <div class="grid-2">
+              <div class="form-field">
+                <label for="street">Street</label>
+                <input id="street" name="street" type="text"  required>
+              </div>
+              <div class="form-field">
+                <label for="suburb">Suburb</label>
+                <input id="suburb" name="suburb" type="text"  required>
+              </div>
+            </div>
+
+            <div class="grid-3">
+              <div class="form-field">
+                <label for="state">State</label>
+                <select id="state" name="state" required>
+                  <option value="">Select</option>
+                  <option>NSW</option><option>VIC</option><option>QLD</option>
+                  <option>SA</option><option>WA</option><option>TAS</option>
+                  <option>ACT</option><option>NT</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="postcode">Postcode</label>
+                <input id="postcode" name="postcode" type="text" inputmode="numeric"  required>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Passwords -->
+          <div class="grid-2">
+            <div class="form-field">
+              <label for="password">Password</label>
+              <input id="password" name="password" type="password" placeholder="Choose a strong password" required>
+            </div>
+
+            <div class="form-field">
+              <label for="confirmPassword">Confirm Password</label>
+              <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter your password" required>
+            </div>
+          </div>
+
+          <!-- Actions & Validation placeholder -->
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Create Account</button>
+            <a class="link-secondary" href="login.html">Already have an account? Log in</a>
+          </div>
+
+          <div class="alert error" hidden aria-live="polite">Please fix the highlighted fields.</div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>© Penny’s Pet Rescue — NSW</p>
+      <nav aria-label="Footer">
+        <ul class="footer-nav">
+          <li><a href="HomePage.html">Home</a></li>
+          <li><a href="search.html">Search Pets</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="about.html">Our Story</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
