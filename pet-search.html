@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pet Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+  <link rel="stylesheet" href="css/pet-search.css" />
+  <style>.error{ color:red; font-size:.9em; margin:.25rem 0 0; }</style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <div class="logo-title">
+          <img src="assets/images/PPRLogo.jpeg" alt="Penny's Pet Rescue Logo" class="logo" />
+          <h1 class="site-title">Penny’s Pet Rescue</h1>
+        </div>
+        <div class="auth-user">
+          Signed in as: <strong>[email]</strong>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <nav aria-label="Primary">
+          <ul class="nav">
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="pet-search.html" aria-current="page">Search Pets</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="adoption-application.html">Adoption Pet</a></li>
+            <li><a href="review.html">Review</a></li>
+          </ul>
+        </nav>
+        <div class="auth-links">
+          <a href="login.html">Login</a> |
+          <a href="#" title="Log out">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="card">
+        <h2 class="hero-title">Search Pets</h2>
+
+        <form action="#" method="get" id="petSearchForm">
+          <label for="species">Species</label>
+          <select id="species" name="species">
+            <option value="">Any</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="rabbit">Rabbit</option>
+            <option value="bird">Bird</option>
+            <option value="other">Other</option>
+          </select>
+          <br><br>
+
+          <label for="age_range">Age Range</label>
+          <select id="age_range" name="age_range">
+            <option value="">Any</option>
+            <option value="puppy_kitten">Puppy/Kitten</option>
+            <option value="young">Young</option>
+            <option value="adult">Adult</option>
+            <option value="senior">Senior</option>
+          </select>
+          <br><br>
+
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender">
+            <option value="">Any</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="unknown">Unknown</option>
+          </select>
+          <br><br>
+
+          <div>
+            <button type="reset" class="btn btn-reset">Reset</button>
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© Penny’s Pet Rescue — NSW</p>
+      <nav aria-label="Footer">
+        <ul class="footer-nav">
+          <li><a href="HomePage.html">Home</a></li>
+          <li><a href="pet-search.html">Search Pets</a></li>
+          <li><a href="adoption-application.html">Adoption Pet</a></li>
+          <li><a href="review.html">Review</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="about.html">Our Story</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    const form = document.getElementById('petSearchForm');
+    if(!form) return;
+
+    form.setAttribute('novalidate','');
+
+    function ensureErrorNode(input){
+      let err = input.nextElementSibling;
+      if(!err || !err.classList.contains('error')){
+        err = document.createElement('p');
+        err.className = 'error';
+        input.insertAdjacentElement('afterend', err);
+      }
+      return err;
+    }
+    function showError(input,msg){
+      const err = ensureErrorNode(input);
+      err.textContent = msg;
+      input.setAttribute('aria-invalid','true');
+    }
+    function clearError(input){
+      const sib = input.nextElementSibling;
+      if(sib && sib.classList.contains('error')) sib.textContent = '';
+      input.removeAttribute('aria-invalid');
+    }
+
+    const species  = document.getElementById('species');
+    const ageRange = document.getElementById('age_range');
+    const gender   = document.getElementById('gender');
+    function validateAgeRange(){
+      clearError(ageRange);
+      const v = (ageRange.value||'').trim();
+      if(!v){
+        showError(ageRange, 'Please select an age range.');
+        return false;
+      }
+      return true;
+    }
+
+    ageRange.addEventListener('change', validateAgeRange);
+    ageRange.addEventListener('blur',   validateAgeRange);
+
+    form.addEventListener('submit', e=>{
+      let ok = true;
+      if(!validateAgeRange()) ok = false;
+      if(!ok){
+        e.preventDefault();
+        const firstBad = form.querySelector('[aria-invalid="true"]');
+        if(firstBad) firstBad.focus();
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
